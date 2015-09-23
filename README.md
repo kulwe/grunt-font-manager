@@ -18,14 +18,14 @@
 ### 使用方法
 
 1. 建立如下文件结构
-
+```text
 |--font
     |--svg/
         |--*.svg
     |--fonts/
         |--*.ttf
     |--font.json
-
+```
 font.json内容如下
 ```js
 {

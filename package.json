@@ -1,21 +1,25 @@
 {
-  "name": "grunt-font-min",
+  "name": "grunt-font-manager",
   "description": "concat and min font from svgs or other font",
   "version": "0.1.0",
-  "homepage": "https://github.com/kulwe/grunt-font-min",
+  "homepage": "https://github.com/kulwe/grunt-font-manager",
   "author": {
     "name": "kule"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/kulwe/grunt-font-min.git"
+    "url": "git://github.com/kulwe/grunt-font-manager.git"
   },
   "bugs": {
-    "url": "https://github.com/kulwe/grunt-font-min/issues"
+    "url": "https://github.com/kulwe/grunt-font-manager/issues"
   },
-  "main": "tasks/fontmin.js",
+  "main": "tasks/fontmanager.js",
   "engines": {
     "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "font-carrier": "~0.0.7",
+    "underscore":"~1.8.3"
   },
   "peerDependencies": {
     "grunt": "~0.4.0"

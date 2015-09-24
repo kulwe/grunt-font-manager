@@ -1,0 +1,29 @@
+{
+  "fontName":"ifontxlds",
+  "fonts":[
+    {
+      "name":"task-level",
+      "unicode":"f001",
+      "file":"svg/task-level.svg",
+      "note":"任务优先级"
+    },
+    {
+      "name":"zoom-out",
+      "unicode":"f002",
+      "file":"fonts/test.ttf#f00e",
+      "note":"放大"
+    },
+    {
+      "name":"zoom-in",
+      "unicode":"f003",
+      "file":"fonts/test.ttf#f010",
+      "note":"缩小"
+    },
+    {
+      "name":"task-edit",
+      "unicode":"f004",
+      "file":"svg/task-edit.svg",
+      "note":"任务编辑"
+    }
+  ]
+}

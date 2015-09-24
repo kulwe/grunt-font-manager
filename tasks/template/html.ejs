@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title><%=fontName%></title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="<%=fontName%>.css">
+</head>
+<body>
+<div class="main">
+    <h1><%=fontName%> 图标</h1>
+    <ul class="icon_lists clear">
+        <%
+        for(var i=0,il=fonts.length;i<il;i++){
+            var font=fonts[i];
+        %>
+        <li>
+            <i class="<%=fontName%> icon-<%=font.name%>"></i>
+            <div class="name"><%=font.note%></div>
+            <div class="code">&amp;#x<%=font.unicode%>;</div>
+            <div class="fontclass">.icon-<%=font.name%></div>
+        </li>
+        <%}%>
+    </ul>
+</div>
+</body>
+</html>

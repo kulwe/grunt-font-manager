@@ -65,11 +65,19 @@ font.json内容如下
 ```
 ### 运行机制
 程序基于font-carrier，先将font.json中的ttf字形抽取出来转换为svg存入配置的svg目录，文件名为class.svg
-（若对应的svg已经存在，不会进行覆盖），然后将svg目录中图标转换为4中字体文件
+（若对应的svg已经存在，不会进行覆盖），然后将svg目录中图标转换为4种字体文件
 ### Options
 
 #### svgPath
 Type: `String`  
-Default: './svg/'
+Default: './font/svg/'
 
 设置svg图标路径，ttf中的字形将会抽取出svg存入该目录
+
+### 注意
+unicode编码只支持UCS-2 参考[javascript unicode详解](http://www.ruanyifeng.com/blog/2014/12/unicode.html)
+对于\u{f0020}的字符，请先将其转为svg字体，在json配置中使用name引用svg字体
+
+### 开发规划
+
+1. 添加可视化json配置编辑页面

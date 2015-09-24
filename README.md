@@ -9,14 +9,14 @@
 > star.svg上传后备注为“星星”。在项目1中，“用户评价”图标为star.svg，
 项目2中“等级排名”图标为star.svg，但是备注都显示为“星星”，且无法在项目里修改
 
-1.  为方便后期修改扩展，同一个项目中两个图标类名不同，但图标相同。使用iconfont.cn管理
+2.  为方便后期修改扩展，同一个项目中两个图标类名不同，但图标相同。使用iconfont.cn管理
 需要再次上传一个相同的svg才行。如
 
 > 任务删除 ifont-task-del 清空邮箱 ifont-email-clean 
 
-1.  iconfont.cn不支持只更新svg信息，svg修改后，需要重新上传，然后添加到项目，
+3.  iconfont.cn不支持只更新svg信息，svg修改后，需要重新上传，然后添加到项目，
 同时从项目里删除旧图标，另外需要保持新旧图标的class和unicode信息一致，操作繁琐。
-1.  项目中可能会使用其他ttf中的图形，需要提取ttf中指定字符的svg，然后上传到项目中才可以实现ttf合并
+4.  项目中可能会使用其他ttf中的图形，需要提取ttf中指定字符的svg，然后上传到项目中才可以实现ttf合并
 
 ### 使用方法
 
@@ -50,7 +50,7 @@ font.json内容如下
 }
 ```
 
-1. 配置grunt
+2. 配置grunt
 ```js
      grunt.initConfig({
             fontmanager : {

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="font">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+    <style type="text/css">
+        .svg-img,
+        .svg-name{
+            width:80px;
+        }
+        .svg-item{
+            padding:10px;
+        }
+    </style>
+</head>
+<body ng-controller="PrevBoxCtrl">
+<form id="svgForm">
+    <input id="fileInput" type="file" multiple webkitdirectory/>
+</form>
+<div id="prevBox" style="display: flex;flex-wrap:wrap;">
+    <div class="svg-item" ng-repeat="svg in svgs">
+        <div><img class="svg-img" src="{{svg.url}}"/></div>
+        <div><input class="svg-name" type="text" value="{{svg.name}}"/></div>
+    </div>
+</div>
+<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://libs.useso.com/js/angular.js/1.2.9/angular.min.js"></script>
+<script type="text/javascript" src="http://libs.useso.com/js/underscore.js/1.6.0/underscore-min.js"></script>
+<script type="text/javascript">
+    angular.module('font',[]).
+        config( [
+            '$compileProvider',
+            function( $compileProvider ) {
+                $compileProvider.imgSrcSanitizationWhitelist(/^\s*blob:/i);
+            }
+        ]);
+    function PrevBoxCtrl($scope){
+        $scope.svgs=[
+            /*  {
+             name:'',
+             url:''
+             }*/
+        ];
+        var svgReg=/\.svg$/i
+        $('#fileInput').on('change',function(){
+            console.log(new Date);
+            var files=this.files;
+            var file;
+            for(var i= 0,il=files.length;i<il;i++){
+                file=files[i];
+                if(!svgReg.test(file.name))continue;
+                var svg={
+                    name:file.name,
+                    url:URL.createObjectURL(file)
+                };
+                var _svg= _.findWhere($scope.svgs,{
+                    name:file.name
+                });
+                if(_svg){
+                    _svg=svg;
+                }else{
+                    $scope.svgs.push(svg)
+                }
+            }
+            $scope.$apply();
+        });
+    }
+</script>
+</body>
+</html>

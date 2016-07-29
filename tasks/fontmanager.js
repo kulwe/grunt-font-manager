@@ -72,6 +72,9 @@ module.exports = function(grunt) {
     var htmlTpl=grunt.file.read(path.resolve(__dirname,'./template/html.ejs'));
     htmlTpl= _.template(htmlTpl);
 
+    var xmlTpl=grunt.file.read(path.resolve(__dirname,'./template/xml.ejs'));
+    xmlTpl= _.template(xmlTpl);
+
     grunt.registerMultiTask('fontmanager', 'fontmanager', function() {
         var options = this.options({
             svgPath: './font/svg/'
@@ -105,6 +108,10 @@ module.exports = function(grunt) {
             var html=htmlTpl(json);
             var htmlFile=path.join(dest,json.fontName+'.html');
             grunt.file.write(htmlFile,html);
+            //生成android xml
+            var xml=xmlTpl(json);
+            var xmlFile=path.join(dest,json.fontName+'.xml');
+            grunt.file.write(xmlFile,xml);
         });
     });
 };

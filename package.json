@@ -1,7 +1,7 @@
 {
   "name": "grunt-font-manager",
   "description": "concat and min font from svgs or other font",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "homepage": "https://github.com/kulwe/grunt-font-manager",
   "author": {
     "name": "kule"
@@ -18,9 +18,9 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "font-carrier": "~0.0.7",
+    "font-carrier": "~0.0.12",
     "underscore":"~1.8.3",
-    "grunt": "~0.4.0"
+    "grunt": ">=0.4.0"
   },
   "keywords": [
     "grunt font"

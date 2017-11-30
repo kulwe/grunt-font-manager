@@ -1,7 +1,7 @@
 {
   "name": "grunt-font-manager",
   "description": "concat and min font from svgs or other font",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/kulwe/grunt-font-manager",
   "author": {
     "name": "kule"
@@ -24,5 +24,11 @@
   },
   "keywords": [
     "grunt font"
-  ]
+  ],
+  "devDependencies": {
+    "grunt-cli": "^1.2.0"
+  },
+  "scripts":{
+    "font":"grunt font"
+  }
 }
